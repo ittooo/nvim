@@ -7,9 +7,21 @@ let g:python3_host_prog = '/usr/bin/python3'
 "-----------------
 " ':'换成','
 let mapleader=","
+
+vnoremap <Leader>y "+y
+nmap <Leader>p "+p
 nmap <leader>wq :wq<CR>
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
+nmap <Leader>WQ :wa<CR>:q<CR>
+nmap <Leader>Q :qa!<CR>
+" 依次遍历子窗口
+nnoremap nw <C-W><C-W>
+" 跳转至右方的窗口
+nnoremap <Leader>lw <C-W>l
+nnoremap <Leader>hw <C-W>h
+nnoremap <Leader>kw <C-W>k
+nnoremap <Leader>jw <C-W>j
 map <leader>sudo :w !sudo tee %
 " 移除 Windows 文件结尾的 `^M`
 noremap <leader>m :%s/<C-V><C-M>//ge<CR>
