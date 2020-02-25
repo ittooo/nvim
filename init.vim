@@ -136,7 +136,10 @@ call plug#begin()
     Plug 'chrisbra/Colorizer' " Show colors with :ColorHighlight
 
     " File navigation
-    Plug 'francoiscabrol/ranger.vim'
+    "Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+    Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug '/usr/bin/fzf'
     Plug 'junegunn/fzf.vim'         "FZF搜索
 
@@ -182,8 +185,27 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+" NERDTree
+map <F1> :NERDTreeToggle<CR>
+
+" NERDTree-git-plugin
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+let g:NERDTreeShowIgnoredStatus = 1
+
+
 " tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <F3> :TagbarToggle<CR>
 
 " suda
 let g:suda_smart_edit = 1
@@ -199,7 +221,7 @@ let g:colorizer_syntax = 1
 let g:rainbow_active = 1
 
 " UndotreeToggle切换撤销树面板
-nnoremap <F5>：UndotreeToggle <cr>
+nnoremap <F2>：UndotreeToggle <cr>
 
 " vim-easy-align 符号对齐
 " Start interactive EasyAlign in visual mode (e.g. vipga)
