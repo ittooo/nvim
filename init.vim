@@ -28,7 +28,8 @@ noremap <leader>m :%s/<C-V><C-M>//ge<CR>
 "-----------------
 " settings
 "-----------------
-set guifont=monaco:h16:cUTF-8:qDRAFT    "字体设置
+set guifont=monaco\ 18                  "linux-font
+set guifont=monaco:h18:cUTF-8:qDRAFT    "windows/mac-font
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936 "设置编码
 set termencoding=utf-8
 set encoding=utf-8
@@ -175,10 +176,11 @@ call plug#end()
 " UI设置
 set t_Co=256
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 let g:airline_theme= 'solarized'
-"let g:airline_solarized_bg='dark'
+let g:solarized_termtrans=0
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
