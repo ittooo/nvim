@@ -205,6 +205,8 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 let g:NERDTreeShowIgnoredStatus = 1
 
+" vimtex
+let g:tex_flavor = 'latex'
 
 " tagbar
 nmap <F3> :TagbarToggle<CR>
